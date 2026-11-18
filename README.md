@@ -2,6 +2,19 @@
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/spring-projects/spring-petclinic) [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=7517918)
 
+## Visit booking demo
+
+We use this fork in the [Software Architecture Microsite](https://guendeti.github.io/projektarbeit-microsite/) to compare three ways to book a visit. The examples are based on [Spring PetClinic at commit `500158f`](https://github.com/spring-projects/spring-petclinic/tree/500158f732419217507c7656904b8e6aa1bcc0d6). Clean and Hexagonal Architecture share one implementation.
+
+Start PetClinic with `./mvnw spring-boot:run` (`.\mvnw.cmd spring-boot:run` on Windows). Open one of these paths on `http://localhost:8080` to book a visit for Leo.
+
+| Version | Booking path |
+| --- | --- |
+| Original | `/owners/1/pets/1/visits/new` |
+| Layered | `/layered/owners/1/pets/1/visits/new` |
+| Clean / Hexagonal | `/clean/owners/1/pets/1/visits/new` |
+| Onion | `/onion/owners/1/pets/1/visits/new` |
+
 ## Understanding the Spring Petclinic application with a few diagrams
 
 See the presentation here:  
@@ -19,7 +32,7 @@ Java 17 or later is required for the build, and the application can run with Jav
 You first need to clone the project locally:
 
 ```bash
-git clone https://github.com/spring-projects/spring-petclinic.git
+git clone https://github.com/guendeti/spring-petclinic.git
 cd spring-petclinic
 ```
 If you are using Maven, you can start the application on the command-line as follows:
